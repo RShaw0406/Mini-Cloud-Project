@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en" ng-app="Dashboard">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Content Share</title>
+
+  <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+  <script type="text/javascript" src="JS/bootstrap.js"></script>
+  <script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+
+  <script type="text/javascript" src="JS/app.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="Home.html">Content Share</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <button id="logoutBtn" type="button" class="btn btn-danger" style="display: none;">Logout</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container" style="margin-top: 70px;">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Welcome to Content Share</h1>
+      </div>
+    </div>
+    <br>
+    <div class="row" id="loginDiv">
+      <div class="col-sm-12">
+        <div class="container mt-3 bg-dark" style="color: #FFFFFF; padding: 1rem;">
+          <h2>Login</h2>
+          <div class="alert alert-danger" id="loginErrorDiv" style="display: none;">
+            <strong>Error!</strong> Incorrect Username or Password
+          </div>
+          <form action="/action_page.php">
+            <div class="mb-3 mt-3">
+              <label for="username">Username:</label>
+              <input type="username" class="form-control" id="username" placeholder="Enter email" name="username">
+            </div>
+            <div class="mb-3">
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+            </div>
+            <button id="login" type="button" class="btn btn-success">Login</button>
+            <button id="signup" type="button" class="btn btn-primary">Signup?</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="signupDiv" style="display: none;">
+      <div class="col-sm-12">
+        <div class="container mt-3 bg-dark" style="color: #FFFFFF; padding: 1rem;">
+          <h2>Signup</h2>
+          <form action="/action_page.php">
+            <div class="mb-3 mt-3">
+              <label for="firstname">First Name:</label>
+              <input type="text" class="form-control" id="firstname" placeholder="Enter email" name="username">
+            </div>
+            <div class="mb-3">
+              <label for="lastname">Last Name:</label>
+              <input type="text" class="form-control" id="lastname" placeholder="Enter password" name="pswd">
+            </div>
+            <div class="mb-3">
+              <label for="email">Email Address:</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter password" name="pswd">
+            </div>
+            <div class="mb-3">
+              <label for="add1">Address 1:</label>
+              <input type="text" class="form-control" id="add1" placeholder="Enter password" name="pswd">
+            </div>
+            <div class="mb-3">
+              <label for="add2">Address 2:</label>
+              <input type="text" class="form-control" id="add2" placeholder="Enter password" name="pswd">
+            </div>
+            <div class="mb-3">
+              <label for="postcode">Postcode:</label>
+              <input type="text" class="form-control" id="postcode" placeholder="Enter password" name="pswd">
+            </div>
+            <div class="mb-3">
+              <label for="country">Country:</label>
+              <input type="text" class="form-control" id="country" placeholder="Enter password" name="pswd">
+            </div>
+            <div class="mb-3 mt-3">
+              <label for="newusername">Username:</label>
+              <input type="username" class="form-control" id="newusername" placeholder="Enter email" name="username">
+            </div>
+            <div class="mb-3">
+              <label for="newpwd">Password:</label>
+              <input type="password" class="form-control" id="newpwd" placeholder="Enter password" name="pswd">
+            </div>
+            <button id="backSubmitUser" type="button" class="btn btn-light">Back</button>
+            <button id="submitUser" type="button" class="btn btn-success">Signup</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row" id="accountDiv" style="display: none;">
+      <div class="col-sm-12">
+        <h2>My Account</h2>
+        <div class="alert alert-success col-md-4">
+          <strong>Info:</strong> You are logged in as <strong><span id="currentUser"></span></strong>
+        </div>
+        <button id="updateUser" type="button" class="btn btn-primary">Edit Account Details</button>
+        <button id="deleteUser" type="button" class="btn btn-danger">Delete Account</button>
+      </div>
+    </div>
+    <div class="row" id="updateUserDiv" style="display: none;">
+      <div class="col-sm-12">
+        <div class="container mt-3 bg-dark" style="color: #FFFFFF; padding: 1rem;">
+          <h2>Edit My Details</h2>
+          <form action="/action_page.php">
+            <div class="mb-3 mt-3">
+              <label for="updatefirstname">First Name:</label>
+              <input type="text" class="form-control" id="updatefirstname" placeholder="Enter email" name="username">
+            </div>
+            <div class="mb-3">
+              <label for="updatelastname">Last Name:</label>
+              <input type="text" class="form-control" id="updatelastname" placeholder="Enter password" name="pswd">
+            </div>
+            <div class="mb-3">
+              <label for="updateemail">Email Address:</label>
+              <input type="email" class="form-control" id="updateemail" placeholder="Enter password" name="pswd">
+            </div>
+            <div class="mb-3">
+              <label for="updateadd1">Address 1:</label>
+              <input type="text" class="form-control" id="updateadd1" placeholder="Enter password" name="pswd">
+            </div>
+            <div class="mb-3">
+              <label for="updateadd2">Address 2:</label>
+              <input type="text" class="form-control" id="updateadd2" placeholder="Enter password" name="pswd">
+            </div>
+            <div class="mb-3">
+              <label for="updatepostcode">Postcode:</label>
+              <input type="text" class="form-control" id="updatepostcode" placeholder="Enter password" name="pswd">
+            </div>
+            <div class="mb-3">
+              <label for="updatecountry">Country:</label>
+              <input type="text" class="form-control" id="updatecountry" placeholder="Enter password" name="pswd">
+            </div>
+            <div class="mb-3 mt-3">
+              <label for="updateusername">Username:</label>
+              <input type="username" class="form-control" id="updateusername" placeholder="Enter email" name="username">
+            </div>
+            <div class="mb-3">
+              <label for="updatenewpwd">Password:</label>
+              <input type="password" class="form-control" id="updatenewpwd" placeholder="Enter password" name="pswd">
+            </div>
+            <button id="backUpdateUser" type="button" class="btn btn-light">Back</button>
+            <button id="submitUpdatedUser" type="button" class="btn btn-success">Update</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row" id="postButtonsDiv" style="display: none;">
+      <div class="col-sm-12">
+        <h2>Posts</h2>
+      </div>
+      <br>
+      <div class="col-sm-12">
+        <button id="addPost" type="button" class="btn btn-primary">Add Post</button>
+        <button id="viewPosts" type="button" class="btn btn-primary">View Posts</button>
+      </div>
+    </div>
+    <br>
+    <div class="row" id="postsDiv" style="display: none;">
+      <div class="col-sm-6 bg-dark text-center" id="currentPosts" style="color: #FFFFFF; padding: 1rem;">
+      </div>
+    </div>
+    <div class="row" id="newPostDiv" style="display: none;">
+      <div class="col-sm-12">
+        <div class="container mt-3 bg-dark" style="color: #FFFFFF; padding: 1rem;">
+          <h2>New Post</h2>
+          <div class="mb-3 mt-3">
+            <label for="postFileName">File Name:</label>
+            <input type="text" class="form-control" id="postFileName" placeholder="Enter file name" name="postFileName">
+          </div>
+          <div class="mb-3">
+            <label for="postText">Post</label>
+            <textarea class="form-control" id="postText" placeholder="Enter message to post" name="postText"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="postFile">Upload File:</label>
+            <input type="file" class="form-control" id="postFile">
+          </div>
+          <button id="backNewPost" type="button" class="btn btn-light">Back</button>
+          <button id="submitPost" type="button" class="btn btn-success">Post</button>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="editPostDiv" style="display: none;">
+      <div class="col-sm-12">
+        <div class="container mt-3 bg-dark" style="color: #FFFFFF; padding: 1rem;">
+          <h2>Edit Post</h2>
+          <div class="mb-3 mt-3">
+            <label for="editFileName">File Name:</label>
+            <input type="text" class="form-control" id="editFileName" placeholder="Enter file name" name="editFileName">
+          </div>
+          <div class="mb-3">
+            <label for="editPostText">Post</label>
+            <textarea class="form-control" id="editPostText" placeholder="Enter message to post" name="editPostText"></textarea>
+          </div>
+          <button id="backEditPost" type="button" class="btn btn-light">Back</button>
+          <button id="submitEditPost" type="button" class="btn btn-success">Post</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
