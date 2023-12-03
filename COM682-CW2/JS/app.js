@@ -64,7 +64,7 @@ $(document).ready(function () {
   });
 
   $("#updateUser").click(function () {
-    document.getElementById('postsDiv').style.display = "none";
+    document.getElementById('postsDiv').style.display = "block";
     document.getElementById('accountDiv').style.display = "none";
     document.getElementById('updateUserDiv').style.display = "block";
     document.getElementById('postButtonsDiv').style.display = "none";
@@ -81,7 +81,7 @@ $(document).ready(function () {
   });
 
   $("#backUpdateUser").click(function () {
-    document.getElementById('postsDiv').style.display = "none";
+    document.getElementById('postsDiv').style.display = "block";
     document.getElementById('accountDiv').style.display = "block";
     document.getElementById('updateUserDiv').style.display = "none";
   });
