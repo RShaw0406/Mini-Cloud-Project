@@ -1,0 +1,48 @@
+.btn-success {
+    background-color: #3c498d !important;
+    border: none !important;
+}
+
+.btn-success:focus, .btn-success:active {
+    border-color: rgb(107,95,164) !important;
+    box-shadow: 0 0 0 0.2rem rgb(107,95,164) !important;
+}
+
+.btn-primary {
+    background-color: #305b82 !important;
+    border: none !important;
+}
+
+.btn-primary:focus, .btn-primary:active {
+    border-color: rgb(141,212,238) !important;
+    box-shadow: 0 0 0 0.2rem rgb(141,212,238) !important;
+}
+
+.btn-danger {
+    background-color: #72254c !important;
+    border: none !important;
+}
+
+.btn-danger:focus, .btn-danger:active {
+    border-color: rgb(182,88,142) !important;
+    box-shadow: 0 0 0 0.2rem rgb(182,88,142) !important;
+}
+
+.btn-light {
+    background-color: #757e89 !important;
+    border: none !important;
+}
+
+.btn-light:focus, .btn-light:active {
+    border-color: rgb(150,159,167) !important;
+    box-shadow: 0 0 0 0.2rem rgb(150,159,167) !important;
+}
+
+.btn-success:hover, .btn-primary:hover, .btn-danger:hover {
+    opacity: 0.7;
+}
+
+.form-control:focus, .form-control:active {
+    border-color: rgb(141,212,238) !important;
+    box-shadow: 0 0 0 0.2rem rgb(141,212,238) !important;
+}

@@ -598,34 +598,4 @@ function GetDescription(userPost)
           alert("API Call FAILED");
         });
     });
-
-
-
-  // var params = {
-  //   "features": "caption"
-  // };
-
-  // var settings = {
-  //   "url": "https://com682-cw2-computervision.cognitiveservices.azure.com/computervision/imageanalysis:analyze?api-version=2023-04-01-preview&" + $.param(params),
-  //   "method": "POST",
-  //   "headers": {
-  //     "Ocp-Apim-Subscription-Key": "c12e726efda54871bd7810e296ac845c",
-  //     "Content-Type": "application/json"
-  //   },
-  //   "data": userPost
-  // };
-
-  // $.ajax(settings).done(function (response) {
-  //   console.log(response.captionResult.text);
-  //   result = captionResult.text
-  //   if (result == null)
-  //   {
-  //     alert("No description available")
-  //   }
-  //   else{
-  //     alert(result);
-  //   }
-  // }).fail(function() {
-  //   alert("API Call FAILED");
-  // });
 }

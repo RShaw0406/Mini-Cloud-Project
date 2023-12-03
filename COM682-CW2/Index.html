@@ -7,6 +7,7 @@
   <title>Content Share</title>
 
   <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="CSS/site.css">
   <script type="text/javascript" src="JS/bootstrap.js"></script>
   <script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
@@ -15,7 +16,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color: #19305e;">
     <div class="container-fluid">
       <a class="navbar-brand" href="Home.html">Content Share</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -39,7 +40,7 @@
     <br>
     <div class="row" id="loginDiv">
       <div class="col-sm-12">
-        <div class="container mt-3 bg-dark" style="color: #FFFFFF; padding: 1rem;">
+        <div class="container mt-3" style="color: #FFFFFF; padding: 1rem; background-color: #19305e;">
           <h2>Login</h2>
           <div class="alert alert-danger" id="loginErrorDiv" style="display: none;">
             <strong>Error!</strong> Incorrect Username or Password
@@ -61,7 +62,7 @@
     </div>
     <div class="row" id="signupDiv" style="display: none;">
       <div class="col-sm-12">
-        <div class="container mt-3 bg-dark" style="color: #FFFFFF; padding: 1rem;">
+        <div class="container mt-3" style="color: #FFFFFF; padding: 1rem; background-color: #19305e;">
           <h2>Signup</h2>
           <form action="/action_page.php">
             <div class="mb-3 mt-3">
@@ -110,7 +111,7 @@
     <div class="row" id="accountDiv" style="display: none;">
       <div class="col-sm-12">
         <h2>My Account</h2>
-        <div class="alert alert-success col-md-4">
+        <div class="alert alert-info col-md-4">
           <strong>Info:</strong> You are logged in as <strong><span id="currentUser"></span></strong>
         </div>
         <button id="updateUser" type="button" class="btn btn-primary">Edit Account Details</button>
@@ -119,7 +120,7 @@
     </div>
     <div class="row" id="updateUserDiv" style="display: none;">
       <div class="col-sm-12">
-        <div class="container mt-3 bg-dark" style="color: #FFFFFF; padding: 1rem;">
+        <div class="container mt-3" style="color: #FFFFFF; padding: 1rem; background-color: #19305e;">
           <h2>Edit My Details</h2>
           <form action="/action_page.php">
             <div class="mb-3 mt-3">
@@ -177,19 +178,19 @@
     </div>
     <br>
     <div class="row" id="postsDiv" style="display: none;">
-      <div class="col-sm-6 bg-dark text-center" id="currentPosts" style="color: #FFFFFF; padding: 1rem;">
+      <div class="col-sm-6 text-center" id="currentPosts" style="color: #FFFFFF; padding: 1rem; background-color: #19305e;">
       </div>
     </div>
     <div class="row" id="newPostDiv" style="display: none;">
       <div class="col-sm-12">
-        <div class="container mt-3 bg-dark" style="color: #FFFFFF; padding: 1rem;">
+        <div class="container mt-3" style="color: #FFFFFF; padding: 1rem; background-color: #19305e;">
           <h2>New Post</h2>
           <div class="mb-3 mt-3">
             <label for="postFileName">File Name:</label>
             <input type="text" class="form-control" id="postFileName" placeholder="Enter file name" name="postFileName">
           </div>
           <div class="mb-3">
-            <label for="postText">Post</label>
+            <label for="postText">Post:</label>
             <textarea class="form-control" id="postText" placeholder="Enter message to post" name="postText"></textarea>
           </div>
           <div class="mb-3">
@@ -203,14 +204,14 @@
     </div>
     <div class="row" id="editPostDiv" style="display: none;">
       <div class="col-sm-12">
-        <div class="container mt-3 bg-dark" style="color: #FFFFFF; padding: 1rem;">
+        <div class="container mt-3" style="color: #FFFFFF; padding: 1rem; background-color: #19305e;">
           <h2>Edit Post</h2>
           <div class="mb-3 mt-3">
             <label for="editFileName">File Name:</label>
             <input type="text" class="form-control" id="editFileName" placeholder="Enter file name" name="editFileName">
           </div>
           <div class="mb-3">
-            <label for="editPostText">Post</label>
+            <label for="editPostText">Post:</label>
             <textarea class="form-control" id="editPostText" placeholder="Enter message to post" name="editPostText"></textarea>
           </div>
           <button id="backEditPost" type="button" class="btn btn-light">Back</button>
