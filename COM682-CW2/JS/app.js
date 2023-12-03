@@ -64,7 +64,7 @@ $(document).ready(function () {
   });
 
   $("#updateUser").click(function () {
-    document.getElementById('postsDiv').style.display = "block";
+    document.getElementById('postsDiv').style.display = "none";
     document.getElementById('accountDiv').style.display = "none";
     document.getElementById('updateUserDiv').style.display = "block";
     document.getElementById('postButtonsDiv').style.display = "none";
@@ -81,9 +81,10 @@ $(document).ready(function () {
   });
 
   $("#backUpdateUser").click(function () {
-    document.getElementById('postsDiv').style.display = "block";
+    document.getElementById('postsDiv').style.display = "none";
     document.getElementById('accountDiv').style.display = "block";
     document.getElementById('updateUserDiv').style.display = "none";
+    document.getElementById('postButtonsDiv').style.display = "block";
   });
 
   $("#submitUpdatedUser").click(function () {
@@ -238,6 +239,7 @@ function UpdateUser(id) {
     document.getElementById('postsDiv').style.display = "none";
     document.getElementById('accountDiv').style.display = "block";
     document.getElementById('updateUserDiv').style.display = "none";
+    document.getElementById('postButtonsDiv').style.display = "block";
     console.log(userAuth)
     console.log(userObj)
   });
