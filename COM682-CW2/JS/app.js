@@ -1,20 +1,20 @@
 $.ajaxSetup({ cache: false });
 //ENDPOINTS
-CIAUSERS = "https://prod-21.uksouth.logic.azure.com/workflows/2b4749de63fa400691fb94f6fa5afc0c/triggers/manual/paths/invoke/rest/v1/users?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=3YtNnI-RLXENJBB_we2FdcO7GQ-ucvdL7ARgfzqn2t0";
-RAAUSERS = "https://prod-09.uksouth.logic.azure.com/workflows/79e8bd81ee474ef0b4c187e1bdd8138f/triggers/manual/paths/invoke/rest/v1/users?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=u5TyRA6J5j_c3FSTzNeNDxaV1aOHQuAGzm0vUH4Lteo";
-UIAUSERS = "https://prod-04.uksouth.logic.azure.com/workflows/4c2951d17ffa4ddd99410accfefab78e/triggers/manual/paths/invoke/rest/v1/users/";
-UIAUSER2 = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=juZEKGVo4H5zpy8YVWCk8XStzExshhZG671KCQ3Qtd4";
-DIAUSERS = "https://prod-18.uksouth.logic.azure.com/workflows/1160eb268ce74ebaaee274616c6c9a35/triggers/manual/paths/invoke/rest/v1/users/";
-DIAUSERS2 = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=AseFXjnALq1FDixapjaM2g4kDoh7Q56xXWHOSDthVzs";
+CIAUSERS = "";
+RAAUSERS = "";
+UIAUSERS = "";
+UIAUSER2 = "";
+DIAUSERS = "";
+DIAUSERS2 = "";
 
-IUPSIMAGES = "https://prod-15.uksouth.logic.azure.com:443/workflows/f9748bccdbf5414791d376c2060d5bc4/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=TvPOg6wRck-4Etk6mXPGJNKfZFxz5DnZt6FaLJN69bo";
-RAIIMAGES = "https://prod-24.uksouth.logic.azure.com:443/workflows/b9656a14679c483dafa85d63f0a05cda/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=p7K_ss7dUVkk9y_mNaVSiuTLpNKOuBxKMaoN7Zcu1r0";
-IDAIIMAGES1 = "https://prod-01.uksouth.logic.azure.com/workflows/82c020f5be404fa1b241061aa5757483/triggers/manual/paths/invoke/rest/v1/blob/"
-IDAIIMAGES2 = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Y4_shO7LjfiAw5b_LmSDGOhsVk5TFVnDpcV6CKKPV18"
-IUIAIMAGES1 = "https://prod-13.uksouth.logic.azure.com/workflows/cdc3ca26ccde484e845daf08f972f101/triggers/manual/paths/invoke/rest/v1/document/";
-IUIAIMAGES2 = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=YK3bNjjZebuoAt0MkgmkMy7ZWcqfYAlsqT6GGbVmRSc";
+IUPSIMAGES = "";
+RAIIMAGES = "";
+IDAIIMAGES1 = ""
+IDAIIMAGES2 = ""
+IUIAIMAGES1 = "";
+IUIAIMAGES2 = "";
 
-BLOB_ACCOUNT = "https://com682cw2cosmosdbblobs.blob.core.windows.net";
+BLOB_ACCOUNT = "";
 
 var userAuth = null;
 
